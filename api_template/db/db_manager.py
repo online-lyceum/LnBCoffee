@@ -3,8 +3,8 @@ import asyncio
 
 import sqlalchemy.engine
 
-from time_api import db
-from time_api.db.base import init_models
+import db
+from db.base import init_models
 
 from sqlalchemy.ext.asyncio import AsyncSession, AsyncResult
 from sqlalchemy import select

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from time_api import api
-from time_api.description import application_metadata
+import api
+from description import application_metadata
 import logging
 
 

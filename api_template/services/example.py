@@ -4,8 +4,8 @@ from sqlalchemy import select
 from fastapi import status, HTTPException
 
 from .base import BaseService
-from time_api import schemas
-from time_api.db import tables
+import schemas
+from db import tables
 
 
 logger = logging.getLogger(__name__)

@@ -1,7 +1,7 @@
 from fastapi import Depends, Response
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from time_api.db.base import get_session
+from db.base import get_session
 
 
 class BaseService:

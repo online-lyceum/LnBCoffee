@@ -2,7 +2,7 @@ import logging
 
 from fastapi import APIRouter
 
-from time_api import schemas
+import schemas
 
 
 logger = logging.getLogger(__name__)
@@ -12,6 +12,6 @@ router = APIRouter(
 )
 
 
-@router.get('', response_model=schemas.messages.Message)
+@router.get('')
 async def get_hello_msg():
-    return schemas.messages.Message(msg='Hello from FastAPI and Lawrence')
+    return 'Hello from FastAPI and Lawrence'
