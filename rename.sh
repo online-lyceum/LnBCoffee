@@ -1,5 +1,5 @@
 echo "Enter project name:"
 read name
-echo $1
-mv api_template $1
-find ./ find -type f -name "*" -not -path "./rename.sh" -exec sed -i "s//$1/g" {} \;
+pth="s/api_template/$name/g"
+mv ./api_template $name
+find ./ -type f -name "*" -not -path "./rename.sh" -exec sed -i $pth {} \;
