@@ -1,6 +1,7 @@
 import logging
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from api_template.services import example
 
 import schemas
 
@@ -15,3 +16,16 @@ router = APIRouter(
 @router.get('')
 async def get_hello_msg():
     return 'Hello from FastAPI and Lawrence'
+
+
+@router.get(
+    '',
+    response_model=schemas.lessons.LessonList
+)
+async def get_examples(
+        subgroup_id: Optional[int] = None,
+        service: example = Depends(example)
+):
+    return await service.get_list(
+        subgroup_id=subgroup_id
+    )

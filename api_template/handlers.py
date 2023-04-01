@@ -1,8 +1,8 @@
 import logging
 
 
-from db import db_manager
-from db.base import get_session
+from api_template.db import db_manager
+from api_template.db.base import get_session
 
 from fastapi import APIRouter
 from fastapi import Depends

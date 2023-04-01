@@ -4,14 +4,13 @@ from sqlalchemy import select
 from fastapi import status, HTTPException
 
 from .base import BaseService
-import schemas
-from db import tables
-
+from api_template import schemas
+from api_template.db import tables
 
 logger = logging.getLogger(__name__)
 
 
-class TeacherService(BaseService):
+class example(BaseService):
     async def get_list(self):
         return schemas.teachers.TeacherList(
             teachers=await self._get_list()

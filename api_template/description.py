@@ -1,4 +1,4 @@
-with open('./description.md', encoding='utf-8') as file:
+with open('./api_template/description.md', encoding='utf-8') as file:
     description = file.read()
 
 application_metadata = {

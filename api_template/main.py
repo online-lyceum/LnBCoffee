@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-import api
+from api_template import api
 from description import application_metadata
 import logging
 

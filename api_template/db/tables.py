@@ -6,7 +6,7 @@ from sqlalchemy import Boolean
 from sqlalchemy import ForeignKey
 from sqlalchemy import UniqueConstraint
 from sqlalchemy import Date
-from db.base import Base
+from api_template.db.base import Base
 
 
 class Example(Base):
